@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29827.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\WingtipToys.csproj", "{3F8458A7-02DD-4B8C-B4E0-F6132D51ADDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Logic.Tests", "WingtipToys.Logic.Tests\WingtipToys.Logic.Tests.csproj", "{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{3F8458A7-02DD-4B8C-B4E0-F6132D51ADDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8458A7-02DD-4B8C-B4E0-F6132D51ADDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F8458A7-02DD-4B8C-B4E0-F6132D51ADDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48AA0879-A04A-4DB3-902D-AFD2B11F4A20}
 	EndGlobalSection
 EndGlobal
