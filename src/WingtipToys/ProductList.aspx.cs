@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WingtipToys.Models;
+using WingtipToys.Domain.Models;
 using System.Web.ModelBinding;
 using System.Web.Routing;
 

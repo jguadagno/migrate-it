@@ -11,6 +11,7 @@ using WingtipToys;
 using WingtipToys.Models;
 using System.Collections.Generic;
 using System.Linq;
+using WingtipToys.Domain.Models;
 
 public class NVPAPICaller
 {

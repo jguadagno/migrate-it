@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WingtipToys.Models;
+using WingtipToys.Domain.Models;
 
 namespace WingtipToys.Logic
 {
@@ -74,7 +75,7 @@ namespace WingtipToys.Logic
       return HttpContext.Current.Session[CartSessionKey].ToString();
     }
 
-    public List<CartItem> GetCartItems()
+    public List<WingtipToys.Domain.Models.CartItem> GetCartItems()
     {
       ShoppingCartId = GetCartId();
 
@@ -205,7 +206,12 @@ namespace WingtipToys.Logic
       return count ?? 0;
     }
 
-
+    public struct ShoppingCartUpdates
+    {
+        public int ProductId;
+        public int PurchaseQuantity;
+        public bool RemoveItem;
+    }
 
     public void MigrateCart(string cartId, string userName)
     {

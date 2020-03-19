@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Linq;
 using WingtipToys.Models;
+using WingtipToys.Domain.Models;
 using WingtipToys.Logic;
 
 namespace WingtipToys

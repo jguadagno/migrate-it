@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using WingtipToys.Domain.Models;
 
 namespace WingtipToys.Models
 {
