@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29827.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\WingtipToys.csproj", "{3F8458A7-02DD-4B8C-B4E0-F6132D51ADDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Logic.Tests", "WingtipToys.Logic.Tests\WingtipToys.Logic.Tests.csproj", "{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WingtipToys.Logic.Tests", "WingtipToys.Logic.Tests\WingtipToys.Logic.Tests.csproj", "{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Domain", "WingtipToys.Domain\WingtipToys.Domain.csproj", "{3CA76806-28E7-466B-9834-26D620AA8FF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

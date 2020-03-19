@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WingtipToys.Models
+namespace WingtipToys.Domain.Models
 {
   public class OrderDetail
   {

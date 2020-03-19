@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -473,12 +475,7 @@
     <Compile Include="Logic\PayPalFunctions.cs" />
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
-    <Compile Include="Models\CartItem.cs" />
-    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\OrderDetail.cs" />
-    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Models\ProductDatabaseInitializer.cs" />
     <Compile Include="ProductDetails.aspx.cs">
@@ -528,6 +525,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WingtipToys.Domain\WingtipToys.Domain.csproj">
+      <Project>{3ca76806-28e7-466b-9834-26d620aa8ff3}</Project>
+      <Name>WingtipToys.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -205,12 +205,7 @@ namespace WingtipToys.Logic
       return count ?? 0;
     }
 
-    public struct ShoppingCartUpdates
-    {
-      public int ProductId;
-      public int PurchaseQuantity;
-      public bool RemoveItem;
-    }
+
 
     public void MigrateCart(string cartId, string userName)
     {
