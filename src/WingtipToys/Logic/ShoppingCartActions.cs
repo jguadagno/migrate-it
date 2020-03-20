@@ -28,7 +28,7 @@ namespace WingtipToys.Logic
         // Create a new cart item if no cart item exists.                 
         cartItem = new CartItem
         {
-          ItemId = Guid.NewGuid().ToString(),
+          CartItemId = Guid.NewGuid().ToString(),
           ProductId = id,
           CartId = ShoppingCartId,
           Product = _db.Products.SingleOrDefault(
