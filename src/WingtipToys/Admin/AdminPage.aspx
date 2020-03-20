@@ -53,7 +53,7 @@
     <table>
         <tr>
             <td><asp:Label ID="LabelRemoveProduct" runat="server">Product:</asp:Label></td>
-            <td><asp:DropDownList ID="DropDownRemoveProduct" runat="server" ItemType="WingtipToys.Models.Product" 
+            <td><asp:DropDownList ID="DropDownRemoveProduct" runat="server" ItemType="WingtipToys.Domain.Models.Product" 
                     SelectMethod="GetProducts" AppendDataBoundItems="true" 
                     DataTextField="ProductName" DataValueField="ProductID" >
                 </asp:DropDownList>
