@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WingtipToys.Logic.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Domain", "WingtipToys.Domain\WingtipToys.Domain.csproj", "{3CA76806-28E7-466B-9834-26D620AA8FF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Data", "WingtipToys.Data\WingtipToys.Data.csproj", "{C7723529-5FEE-468F-A822-E7E1CA86C08A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CA76806-28E7-466B-9834-26D620AA8FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

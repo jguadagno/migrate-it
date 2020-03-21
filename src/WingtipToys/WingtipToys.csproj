@@ -479,8 +479,6 @@
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ProductContext.cs" />
-    <Compile Include="Models\ProductDatabaseInitializer.cs" />
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
