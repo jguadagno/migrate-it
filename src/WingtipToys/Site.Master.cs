@@ -7,9 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Linq;
-using WingtipToys.Models;
-using WingtipToys.Domain.Models;
 using WingtipToys.Logic;
+using WingtipToys.Domain.Models;
 
 namespace WingtipToys
 {
@@ -80,18 +79,18 @@ namespace WingtipToys
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-          using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
-          {
-            string cartStr = string.Format("Cart ({0})", usersShoppingCart.GetCount());
+            var cartId = ShoppingCartActions.GetCartId();
+            var userCart = new Logic.CartManager();
+            var itemCount = userCart.GetCountOfItemsInCart(cartId);
+
+            var cartStr = $"Cart ({itemCount}";
             cartCount.InnerText = cartStr;
-          }
         }
 
-        public IQueryable<Category> GetCategories()
-        {
-          var _db = new WingtipToys.Models.ProductContext();
-          IQueryable<Category> query = _db.Categories;
-          return query;
+        public List<WingtipToys.Domain.Models.Category> GetCategories() {
+
+            var productManager = new Logic.ProductManager();
+            return productManager.GetCategories();
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
@@ -99,5 +98,4 @@ namespace WingtipToys
             Context.GetOwinContext().Authentication.SignOut();
         }
     }
-
 }

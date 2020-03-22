@@ -6,7 +6,7 @@ using WingtipToys.Domain.Models;
 
 namespace WingtipToys.Logic
 {
-    public class Cart
+    public class CartManager
     {
         private ProductContext _db = new ProductContext();
 
@@ -69,16 +69,7 @@ namespace WingtipToys.Logic
             return total ?? decimal.Zero;
         }
 
-        //public ShoppingCartActions GetCart(HttpContext context)
-        //{
-        //    using (var cart = new ShoppingCartActions())
-        //    {
-        //        cart.ShoppingCartId = cart.GetCartId();
-        //        return cart;
-        //    }
-        //}
-
-        public void UpdateShoppingCartDatabase(string cartId, ShoppingCartUpdates[] CartItemUpdates)
+        public void UpdateShoppingCartDatabase(string cartId, Domain.Models.ShoppingCartUpdates[] CartItemUpdates)
         {
             using (var db = new Data.ProductContext())
             {
@@ -185,11 +176,28 @@ namespace WingtipToys.Logic
             _db.SaveChanges();
         }
 
-        public struct ShoppingCartUpdates
+        public bool AddOrder(Order order)
         {
-            public int ProductId;
-            public int PurchaseQuantity;
-            public bool RemoveItem;
+            _db.Orders.Add(order);
+            return _db.SaveChanges() != 0;
+        }
+
+        public bool SaveOrderDetail(OrderDetail orderDetail)
+        {
+            _db.OrderDetails.Add(orderDetail);
+            return _db.SaveChanges() != 0;
+        }
+
+        public bool UpdateOrderPaymentTransactionId(int orderId, string paymentTransactionId)
+        {
+            var order = _db.Orders.FirstOrDefault(o => o.OrderId == orderId);
+            if (order == null)
+            {
+                return false;
+            }
+
+            order.PaymentTransactionId = paymentTransactionId;
+            return _db.SaveChanges() != 0;
         }
     }
 }

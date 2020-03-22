@@ -57,7 +57,7 @@ namespace WingtipToys.Admin
         }
 
         // Add product data to DB.
-        AddProducts products = new AddProducts();
+        var products = new WingtipToys.Logic.ProductManager();
         bool addSuccess = products.AddProduct(AddProductName.Text, AddProductDescription.Text,
             AddProductPrice.Text, DropDownAddCategory.SelectedValue, ProductImage.FileName);
         if (addSuccess)
@@ -79,21 +79,21 @@ namespace WingtipToys.Admin
 
     public IQueryable GetCategories()
     {
-      var _db = new WingtipToys.Models.ProductContext();
+      var _db = new WingtipToys.Data.ProductContext();
       IQueryable query = _db.Categories;
       return query;
     }
 
     public IQueryable GetProducts()
     {
-      var _db = new WingtipToys.Models.ProductContext();
+      var _db = new WingtipToys.Data.ProductContext();
       IQueryable query = _db.Products;
       return query;
     }
 
     protected void RemoveProductButton_Click(object sender, EventArgs e)
     {
-      using (var _db = new WingtipToys.Models.ProductContext())
+      using (var _db = new WingtipToys.Data.ProductContext())
       {
         int productId = Convert.ToInt16(DropDownRemoveProduct.SelectedValue);
         var myItem = (from c in _db.Products where c.ProductID == productId select c).FirstOrDefault();

@@ -21,7 +21,7 @@ namespace WingtipToys
                         [QueryString("id")] int? categoryId,
                         [RouteData] string categoryName)
     {
-      var _db = new WingtipToys.Models.ProductContext();
+      var _db = new WingtipToys.Data.ProductContext();
       IQueryable<Product> query = _db.Products;
 
       if (categoryId.HasValue && categoryId > 0)

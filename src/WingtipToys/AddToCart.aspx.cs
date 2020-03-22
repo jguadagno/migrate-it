@@ -14,14 +14,11 @@ namespace WingtipToys
     protected void Page_Load(object sender, EventArgs e)
     {
       string rawId = Request.QueryString["ProductID"];
-      int productId;
-      if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out productId))
+      if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out var productId))
       {
-        using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
-        {
-          usersShoppingCart.AddToCart(Convert.ToInt16(rawId));
-        }
-
+          var cartId = ShoppingCartActions.GetCartId();
+          var userCart = new Logic.CartManager();
+          userCart.AddToCart(cartId, productId);
       }
       else
       {

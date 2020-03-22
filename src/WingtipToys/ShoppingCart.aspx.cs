@@ -16,58 +16,57 @@ namespace WingtipToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+
+            var cartManager = new Logic.CartManager();
+            var cartId = ShoppingCartActions.GetCartId();
+            var cartTotal = cartManager.GetCartTotal(cartId);
+
+            if (cartTotal > 0)
             {
-                decimal cartTotal = 0;
-                cartTotal = usersShoppingCart.GetTotal();
-                if (cartTotal > 0)
-                {
-                    // Display Total.
-                    lblTotal.Text = String.Format("{0:c}", cartTotal);
-                }
-                else
-                {
-                    LabelTotalText.Text = "";
-                    lblTotal.Text = "";
-                    ShoppingCartTitle.InnerText = "Shopping Cart is Empty";
-                    UpdateBtn.Visible = false;
-                    CheckoutImageBtn.Visible = false;
-                }
+                // Display Total.
+                lblTotal.Text = $"{cartTotal:c}";
+            }
+            else
+            {
+                LabelTotalText.Text = "";
+                lblTotal.Text = "";
+                ShoppingCartTitle.InnerText = "Shopping Cart is Empty";
+                UpdateBtn.Visible = false;
+                CheckoutImageBtn.Visible = false;
             }
         }
 
         public List<CartItem> GetShoppingCartItems()
         {
-            ShoppingCartActions actions = new ShoppingCartActions();
-            return actions.GetCartItems();
+            var cartManager = new Logic.CartManager();
+            return cartManager.GetCartItems(ShoppingCartActions.GetCartId());
         }
 
         public List<CartItem> UpdateCartItems()
         {
-            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+            var cartManager = new Logic.CartManager();
+            var cartId = ShoppingCartActions.GetCartId();
+
+            Domain.Models.ShoppingCartUpdates[] cartUpdates = new Domain.Models.ShoppingCartUpdates[CartList.Rows.Count];
+            for (int i = 0; i < CartList.Rows.Count; i++)
             {
-                String cartId = usersShoppingCart.GetCartId();
+                IOrderedDictionary rowValues = new OrderedDictionary();
+                rowValues = GetValues(CartList.Rows[i]);
+                cartUpdates[i].ProductId = Convert.ToInt32(rowValues["ProductID"]);
 
-                ShoppingCartActions.ShoppingCartUpdates[] cartUpdates = new ShoppingCartActions.ShoppingCartUpdates[CartList.Rows.Count];
-                for (int i = 0; i < CartList.Rows.Count; i++)
-                {
-                    IOrderedDictionary rowValues = new OrderedDictionary();
-                    rowValues = GetValues(CartList.Rows[i]);
-                    cartUpdates[i].ProductId = Convert.ToInt32(rowValues["ProductID"]);
+                CheckBox cbRemove = new CheckBox();
+                cbRemove = (CheckBox)CartList.Rows[i].FindControl("Remove");
+                cartUpdates[i].RemoveItem = cbRemove.Checked;
 
-                    CheckBox cbRemove = new CheckBox();
-                    cbRemove = (CheckBox)CartList.Rows[i].FindControl("Remove");
-                    cartUpdates[i].RemoveItem = cbRemove.Checked;
-
-                    TextBox quantityTextBox = new TextBox();
-                    quantityTextBox = (TextBox)CartList.Rows[i].FindControl("PurchaseQuantity");
-                    cartUpdates[i].PurchaseQuantity = Convert.ToInt16(quantityTextBox.Text.ToString());
-                }
-                usersShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates);
-                CartList.DataBind();
-                lblTotal.Text = String.Format("{0:c}", usersShoppingCart.GetTotal());
-                return usersShoppingCart.GetCartItems();
+                TextBox quantityTextBox = new TextBox();
+                quantityTextBox = (TextBox)CartList.Rows[i].FindControl("PurchaseQuantity");
+                cartUpdates[i].PurchaseQuantity = Convert.ToInt16(quantityTextBox.Text.ToString());
             }
+            cartManager.UpdateShoppingCartDatabase(cartId, cartUpdates);
+            CartList.DataBind();
+            lblTotal.Text = $"{cartManager.GetCartTotal(cartId):c}";
+            return cartManager.GetCartItems(cartId);
+
         }
 
         public static IOrderedDictionary GetValues(GridViewRow row)
@@ -91,10 +90,11 @@ namespace WingtipToys
 
         protected void CheckoutBtn_Click(object sender, ImageClickEventArgs e)
         {
-            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
-            {
-                Session["payment_amt"] = usersShoppingCart.GetTotal();
-            }
+            var cartManager = new Logic.CartManager();
+            var cartTotal = cartManager.GetCartTotal(ShoppingCartActions.GetCartId());
+
+            Session["payment_amt"] = cartTotal;
+
             Response.Redirect("Checkout/CheckoutStart.aspx");
         }
     }

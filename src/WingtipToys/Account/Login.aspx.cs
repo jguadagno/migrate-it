@@ -4,7 +4,7 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
-using WingtipToys.Models;
+using WingtipToys.Logic;
 
 namespace WingtipToys.Account
 {
@@ -38,8 +38,8 @@ namespace WingtipToys.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        WingtipToys.Logic.ShoppingCartActions usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions();
-                        String cartId = usersShoppingCart.GetCartId();
+                        String cartId = ShoppingCartActions.GetCartId();
+                        var usersShoppingCart = new Logic.CartManager();
                         usersShoppingCart.MigrateCart(cartId, Email.Text);
 
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
@@ -48,10 +48,11 @@ namespace WingtipToys.Account
                         Response.Redirect("/Account/Lockout");
                         break;
                     case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
-                                                        Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
+                        Response.Redirect(String.Format(
+                                "/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
+                                Request.QueryString["ReturnUrl"],
+                                RememberMe.Checked),
+                            true);
                         break;
                     case SignInStatus.Failure:
                     default:

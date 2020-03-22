@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using WingtipToys.Data;
 
 namespace WingtipToys.Logic
 {
-    class ProductManager
+    public class ProductManager
     {
         public bool AddProduct(string ProductName, string ProductDesc, string ProductPrice, string ProductCategory, string ProductImagePath)
         {
@@ -22,6 +24,14 @@ namespace WingtipToys.Logic
             }
             // Success.
             return true;
+        }
+
+        public List<Domain.Models.Category> GetCategories()
+        {
+            using (ProductContext _db = new ProductContext())
+            {
+                return _db.Categories.ToList();
+            }
         }
     }
 }
