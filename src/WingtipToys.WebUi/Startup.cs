@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace WingtipToys.WebUi
 {
@@ -32,6 +33,14 @@ namespace WingtipToys.WebUi
             {
                 connectionString = connectionString.Replace("%CONTENTROOTPATH%", _contentRootPath);
             }
+
+            services.AddDbContext<Models.ApplicationDbContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            services.AddIdentity<WingtipToys.WebUi.Models.ApplicationUser, IdentityRole>()
+                            .AddEntityFrameworkStores<Models.ApplicationDbContext>()
+                            .AddDefaultTokenProviders();
 
             services.AddDbContext<Data.ProductContext>(options => {
                 options.UseSqlServer(connectionString);
