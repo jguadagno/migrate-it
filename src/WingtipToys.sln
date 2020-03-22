@@ -7,11 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WingtipToys.Logic.Tests", "WingtipToys.Logic.Tests\WingtipToys.Logic.Tests.csproj", "{5F4002A7-2004-40D5-BF5E-CBBF78F91F52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Domain", "WingtipToys.Domain\WingtipToys.Domain.csproj", "{3CA76806-28E7-466B-9834-26D620AA8FF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WingtipToys.Domain", "WingtipToys.Domain\WingtipToys.Domain.csproj", "{3CA76806-28E7-466B-9834-26D620AA8FF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Data", "WingtipToys.Data\WingtipToys.Data.csproj", "{C7723529-5FEE-468F-A822-E7E1CA86C08A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WingtipToys.Data", "WingtipToys.Data\WingtipToys.Data.csproj", "{C7723529-5FEE-468F-A822-E7E1CA86C08A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Logic", "WingtipToys.Logic\WingtipToys.Logic.csproj", "{4563747B-B74F-4F17-B77A-0CC47857FD69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WingtipToys.Logic", "WingtipToys.Logic\WingtipToys.Logic.csproj", "{4563747B-B74F-4F17-B77A-0CC47857FD69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.WebUi", "WingtipToys.WebUi\WingtipToys.WebUi.csproj", "{87929FDF-8D6A-4061-92C7-7CD66EF1B137}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87929FDF-8D6A-4061-92C7-7CD66EF1B137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87929FDF-8D6A-4061-92C7-7CD66EF1B137}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87929FDF-8D6A-4061-92C7-7CD66EF1B137}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87929FDF-8D6A-4061-92C7-7CD66EF1B137}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
