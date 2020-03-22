@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using WingtipToys.Data;
+using WingtipToys.Domain;
 using WingtipToys.Domain.Models;
 
 namespace WingtipToys.Logic
 {
-    public class CartManager
+    public class CartManager : ICartManager
     {
-        private ProductContext _db = new ProductContext();
+        private readonly ProductContext _db;
+
+        public CartManager(ProductContext productContext)
+        {
+            _db = productContext;
+        }
 
         public void AddToCart(string cartId, int productId)
         {
@@ -40,15 +46,6 @@ namespace WingtipToys.Logic
             _db.SaveChanges();
         }
 
-        public void Dispose()
-        {
-            if (_db != null)
-            {
-                _db.Dispose();
-                _db = null;
-            }
-        }
-
         // DEMO: Move the GetCartId back to the Web App
 
         public List<CartItem> GetCartItems(string cartId)
@@ -64,83 +61,86 @@ namespace WingtipToys.Logic
             decimal? total = decimal.Zero;
             total = (decimal?)(from cartItems in _db.CartItems
                                where cartItems.CartId == cartId
-                               select (int?)cartItems.Quantity *
+                               select cartItems.Quantity *
                                cartItems.Product.UnitPrice).Sum();
             return total ?? decimal.Zero;
         }
 
-        public void UpdateShoppingCartDatabase(string cartId, Domain.Models.ShoppingCartUpdates[] CartItemUpdates)
+        //public ShoppingCartActions GetCart(HttpContext context)
+        //{
+        //    using (var cart = new ShoppingCartActions())
+        //    {
+        //        cart.ShoppingCartId = cart.GetCartId();
+        //        return cart;
+        //    }
+        //}
+
+        public void UpdateShoppingCartDatabase(string cartId, ShoppingCartUpdates[] CartItemUpdates)
         {
-            using (var db = new Data.ProductContext())
+
+            try
             {
-                try
+                int cartItemCount = CartItemUpdates.Count();
+                List<CartItem> myCart = GetCartItems(cartId);
+                foreach (var cartItem in myCart)
                 {
-                    int cartItemCount = CartItemUpdates.Count();
-                    List<CartItem> myCart = GetCartItems(cartId);
-                    foreach (var cartItem in myCart)
+                    // Iterate through all rows within shopping cart list
+                    for (int i = 0; i < cartItemCount; i++)
                     {
-                        // Iterate through all rows within shopping cart list
-                        for (int i = 0; i < cartItemCount; i++)
+                        if (cartItem.Product.ProductID == CartItemUpdates[i].ProductId)
                         {
-                            if (cartItem.Product.ProductID == CartItemUpdates[i].ProductId)
+                            if (CartItemUpdates[i].PurchaseQuantity < 1 || CartItemUpdates[i].RemoveItem == true)
                             {
-                                if (CartItemUpdates[i].PurchaseQuantity < 1 || CartItemUpdates[i].RemoveItem == true)
-                                {
-                                    RemoveItem(cartId, cartItem.ProductId);
-                                }
-                                else
-                                {
-                                    UpdateItem(cartId, cartItem.ProductId, CartItemUpdates[i].PurchaseQuantity);
-                                }
+                                RemoveItem(cartId, cartItem.ProductId);
+                            }
+                            else
+                            {
+                                UpdateItem(cartId, cartItem.ProductId, CartItemUpdates[i].PurchaseQuantity);
                             }
                         }
                     }
                 }
-                catch (Exception exception)
-                {
-                    throw new Exception("ERROR: Unable to Update Cart Database - " + exception.Message.ToString(), exception);
-                }
             }
+            catch (Exception exception)
+            {
+                throw new Exception("ERROR: Unable to Update Cart Database - " + exception.Message.ToString(), exception);
+            }
+
         }
 
         public void RemoveItem(string removeCartID, int removeProductID)
         {
-            using (var _db = new Data.ProductContext())
+
+            try
             {
-                try
+                var myItem = (from c in _db.CartItems where c.CartId == removeCartID && c.Product.ProductID == removeProductID select c).FirstOrDefault();
+                if (myItem != null)
                 {
-                    var myItem = (from c in _db.CartItems where c.CartId == removeCartID && c.Product.ProductID == removeProductID select c).FirstOrDefault();
-                    if (myItem != null)
-                    {
-                        // Remove Item.
-                        _db.CartItems.Remove(myItem);
-                        _db.SaveChanges();
-                    }
+                    // Remove Item.
+                    _db.CartItems.Remove(myItem);
+                    _db.SaveChanges();
                 }
-                catch (Exception exp)
-                {
-                    throw new Exception("ERROR: Unable to Remove Cart Item - " + exp.Message.ToString(), exp);
-                }
+            }
+            catch (Exception exp)
+            {
+                throw new Exception("ERROR: Unable to Remove Cart Item - " + exp.Message.ToString(), exp);
             }
         }
 
         public void UpdateItem(string updateCartID, int updateProductID, int quantity)
         {
-            using (var _db = new Data.ProductContext())
+            try
             {
-                try
+                var myItem = (from c in _db.CartItems where c.CartId == updateCartID && c.Product.ProductID == updateProductID select c).FirstOrDefault();
+                if (myItem != null)
                 {
-                    var myItem = (from c in _db.CartItems where c.CartId == updateCartID && c.Product.ProductID == updateProductID select c).FirstOrDefault();
-                    if (myItem != null)
-                    {
-                        myItem.Quantity = quantity;
-                        _db.SaveChanges();
-                    }
+                    myItem.Quantity = quantity;
+                    _db.SaveChanges();
                 }
-                catch (Exception exp)
-                {
-                    throw new Exception("ERROR: Unable to Update Cart Item - " + exp.Message.ToString(), exp);
-                }
+            }
+            catch (Exception exp)
+            {
+                throw new Exception("ERROR: Unable to Update Cart Item - " + exp.Message.ToString(), exp);
             }
         }
 
@@ -166,15 +166,16 @@ namespace WingtipToys.Logic
         }
 
 
-        public void MigrateCart(string cartId, string userName)
+        public bool MigrateCart(string cartId, string userName)
         {
-            var shoppingCart = _db.CartItems.Where(c => c.CartId == cartId);
-            foreach (CartItem item in shoppingCart)
+            var cartItems = _db.CartItems.Where(c => c.CartId == cartId);
+            foreach (CartItem item in cartItems)
             {
                 item.CartId = userName;
             }
-            _db.SaveChanges();
+            return _db.SaveChanges() != 0;
         }
+
 
         public bool AddOrder(Order order)
         {
