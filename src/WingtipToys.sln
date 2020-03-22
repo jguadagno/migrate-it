@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Domain", "Wingt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Data", "WingtipToys.Data\WingtipToys.Data.csproj", "{C7723529-5FEE-468F-A822-E7E1CA86C08A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Logic", "WingtipToys.Logic\WingtipToys.Logic.csproj", "{4563747B-B74F-4F17-B77A-0CC47857FD69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7723529-5FEE-468F-A822-E7E1CA86C08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4563747B-B74F-4F17-B77A-0CC47857FD69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
