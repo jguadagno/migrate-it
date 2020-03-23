@@ -33,6 +33,9 @@ namespace WingtipToys.WebUi
             {
                 connectionString = connectionString.Replace("%CONTENTROOTPATH%", _contentRootPath);
             }
+            services.AddDbContext<Data.ProductContext>(options => {
+                options.UseSqlServer(connectionString);
+            });
 
             services.AddDbContext<Models.ApplicationDbContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
@@ -42,9 +45,8 @@ namespace WingtipToys.WebUi
                             .AddEntityFrameworkStores<Models.ApplicationDbContext>()
                             .AddDefaultTokenProviders();
 
-            services.AddDbContext<Data.ProductContext>(options => {
-                options.UseSqlServer(connectionString);
-            });
+            services.AddScoped<Domain.ICartManager, Logic.CartManager>();
+            services.AddScoped<Domain.IProductManager, Logic.ProductManager>();
 
             services.AddRazorPages();
         }

@@ -12,9 +12,15 @@ namespace WingtipToys.WebUi.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly Domain.IProductManager _productManager;
+
+        public IndexModel(ILogger<IndexModel> logger, Domain.IProductManager productManager)
         {
             _logger = logger;
+            _productManager = productManager;
+
+            var categories = _productManager.GetCategories();
+            logger.LogDebug(categories.Count().ToString());
         }
 
         public void OnGet()

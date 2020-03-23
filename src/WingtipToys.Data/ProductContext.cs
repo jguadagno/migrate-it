@@ -23,11 +23,5 @@ namespace WingtipToys.Data
                 database.Seed(this);
             }
         }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["WingtipToys"].ConnectionString;
-            optionsBuilder.UseSqlServer(connectionString);
-        }
     }
 }
