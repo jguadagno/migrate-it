@@ -1,0 +1,11 @@
+﻿@model List<WingtipToys.Domain.Models.Category>
+
+<ul class="nav justify-content-center">
+    @foreach (var category in Model)
+    {
+        <li class="nav-item">
+            <a asp-page="/Products/Category"
+               asp-route-id="@category.CategoryID" class="nav-link">@category.CategoryName</a>
+        </li>
+    }
+</ul>
