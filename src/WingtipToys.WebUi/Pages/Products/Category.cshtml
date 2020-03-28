@@ -1,0 +1,26 @@
+﻿@page
+@model CategoryModel
+@{
+    ViewData["Title"] = "Category";
+    Layout = "_Layout";
+}
+
+<h2>Products by Category</h2>
+<h3>@Model.CategoryName</h3>
+
+<div class="row">
+@foreach (var product in @Model.Products)
+{
+<div class="col">
+    <div class="card" style="width: 18rem;">
+        <img src="/Catalog/Images/Thumbs/@product.ImagePath" class="card-img-top" alt="@product.ProductName">
+        <div class="card-body">
+            <h5 class="card-title">@product.ProductName</h5>
+            <p class="card-text">@product.Description<br />@($"{product.UnitPrice:c}")</p>
+            <a href="/AddToCart.aspx?productID=@product.ProductID" class="btn btn-primary">Add to Cart</a>
+            <a asp-page="/Products/Details" asp-route-id="@product.ProductID" class="btn btn-secondary">Details</a>
+        </div>
+    </div>
+</div>
+}
+    <</div>
