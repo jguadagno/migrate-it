@@ -1,0 +1,590 @@
+********** 8/22/2014 3:12:35 PM **********
+Exception Type: System.Web.HttpException
+Exception: An HTTP error occurred. Page Not found. Please try again.
+Source: customErrors section - Web.config
+Stack Trace: 
+********** 8/22/2014 3:13:19 PM **********
+Exception Type: System.Exception
+Exception: The error was unhandled by application code.
+Source: customErrors section - Web.config
+Stack Trace: 
+********** 8/22/2014 3:14:34 PM **********
+Inner Exception Type: System.InvalidOperationException
+Inner Exception: An InvalidOperationException occurred in the Page_Load handler on the Default.aspx page.
+Inner Source: WingtipToys
+Inner Stack Trace: 
+   at WingtipToys._Default.Page_Load(Object sender, EventArgs e) in c:\Users\erikre\Documents\Visual Studio 2013\Projects\WingtipToys\WingtipToys\Default.aspx.cs:line 14
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\erikre\AppData\Local\Temp\Temporary ASP.NET Files\vs\0c5d3a2b\4adeb894\App_Web_gahbfr2b.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/22/2014 3:15:29 PM **********
+Exception Type: System.InvalidOperationException
+Exception: An InvalidOperationException occurred in the Page_Load handler on the Default.aspx page.
+Source: Page_Error - Default.aspx
+Stack Trace: 
+   at WingtipToys._Default.Page_Load(Object sender, EventArgs e) in c:\Users\erikre\Documents\Visual Studio 2013\Projects\WingtipToys\WingtipToys\Default.aspx.cs:line 14
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 8/22/2014 3:22:59 PM **********
+Exception Type: System.Web.HttpException
+Exception: An HTTP error occurred. Page Not found. Please try again.
+Source: customErrors section - Web.config
+Stack Trace: 
+********** 8/9/2020 12:47:04 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_iovmpowj.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:47:37 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_iovmpowj.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:48:01 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_iovmpowj.5.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:49:10 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:49:37 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:49:57 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:50:33 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:51:35 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:57:02 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:57:32 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\jguadagno\AppData\Local\Temp\Temporary ASP.NET Files\root\a9ec50c9\b8419e29\App_Web_2qyt2mqv.4.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+********** 8/9/2020 12:58:49 PM **********
+Inner Exception Type: System.ArgumentException
+Inner Exception: Keyword not supported: 'intial catalog'.
+Inner Source: System.Data
+Inner Stack Trace: 
+   at System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   at System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   at System.Data.SqlClient.SqlConnectionString..ctor(String connectionString)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnectionOptions(String connectionString, DbConnectionOptions previous)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(DbConnectionPoolKey key, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions& userConnectionOptions)
+   at System.Data.SqlClient.SqlConnection.ConnectionString_Set(DbConnectionPoolKey key)
+   at System.Data.SqlClient.SqlConnection.set_ConnectionString(String value)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<SetConnectionString>b__18(DbConnection t, DbConnectionPropertyInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.SetConnectionString(DbConnection connection, DbConnectionPropertyInterceptionContext`1 interceptionContext)
+   at System.Data.Entity.Internal.LazyInternalConnection.InitializeFromConnectionStringSetting(ConnectionStringSettings appConfigConnection)
+   at System.Data.Entity.Internal.LazyInternalConnection.TryInitializeFromAppConfig(String name, AppConfig config)
+   at System.Data.Entity.Internal.LazyInternalConnection.Initialize()
+   at System.Data.Entity.Internal.LazyInternalConnection.get_ProviderName()
+   at System.Data.Entity.Internal.LazyInternalContext.get_ProviderName()
+   at System.Data.Entity.Internal.DefaultModelCacheKeyFactory.Create(DbContext context)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at WingtipToys.Logic.ShoppingCartActions.GetCount() in C:\Projects\Wingtip-Toys\src\WingtipToys\Logic\ShoppingCartActions.cs:line 201
+   at WingtipToys.SiteMaster.Page_PreRender(Object sender, EventArgs e) in C:\Projects\Wingtip-Toys\src\WingtipToys\Site.Master.cs:line 84
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnPreRender(EventArgs e)
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Control.PreRenderRecursiveInternal()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: Application_Error - Global.asax
+Stack Trace: 
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\vs\280f0398\32702afd\App_Web_lculnffb.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
